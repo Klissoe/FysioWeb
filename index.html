@@ -1,43 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physiotherapy by [Your Mother's Name]</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Professionele bekkenfysiotherapie door Dorien Bennink. Gespecialiseerd in herstel en persoonlijke zorg.">
+    <title>Dorien Bennink Fysiotherapie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basis Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Navigatiebalk */
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Sectie */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #4a90e2, #4a6fa5);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Over Ons Sectie */
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .about img {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about .content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Diensten Sectie */
+        .services {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4a90e2;
+        }
+
+        .services ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .services li {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Sectie */
+        .contact {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+
+        .contact div {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigatiebalk -->
     <header>
-        <h1>Welcome to [Your Mother's Name] Physiotherapy</h1>
+        <div class="logo">Dorien Bennink</div>
         <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
+            <a href="#about">Over</a>
+            <a href="#services">Diensten</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
-    <main>
-        <section id="about">
-            <h2>About</h2>
-            <p>Welcome! I am [Your Mother's Name], a certified physiotherapist with [X years] of experience helping clients feel their best.</p>
-        </section>
-        <section id="services">
-            <h2>Services</h2>
-            <ul>
-                <li>Sports Therapy</li>
-                <li>Rehabilitation</li>
-                <li>Massage Therapy</li>
-                <li>Posture Correction</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Phone: [Your Phone Number]</p>
-            <p>Email: [Your Email Address]</p>
-            <p>Address: [Your Clinic Address]</p>
-        </section>
-    </main>
+
+    <!-- Hero Sectie -->
+    <section class="hero">
+        <h1>Welkom bij Fysiotherapie Dorien Bennink</h1>
+        <p>Ik help u om beter te bewegen, beter te voelen en beter te leven.</p>
+    </section>
+
+    <!-- Over Ons Sectie -->
+    <section class="about" id="about">
+        <img src="foto%20Dorien%20Bennink.png" alt="Dorien Bennink">
+        <div class="content">
+            <h2>Over Dorien Bennink</h2>
+            <p>Ik zet me in om uw mobiliteit te herstellen, pijn te verminderen en uw kwaliteit van leven te verbeteren. Met jarenlange ervaring bied ik gespecialiseerde bekkenfysiotherapie en persoonlijke zorg.</p>
+        </div>
+    </section>
+
+    <!-- Diensten Sectie -->
+    <section class="services" id="services">
+        <h2>Onze Diensten</h2>
+        <ul>
+            <li><strong>Bekkenfysiotherapie:</strong> Verbeter uw houding en herstel sneller.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Sectie -->
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <div>
+            <strong>Telefoon:</strong> <a href="tel:0610101257">+31 610 101 257</a>
+        </div>
+        <div>
+            <strong>E-mail:</strong> <a href="mailto:dorien.bennink@upcmail.nl">dorien.bennink@upcmail.nl</a>
+        </div>
+        <div>
+            <strong>Adres:</strong> Muiderslotweg 154, Haarlem
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 [Your Mother's Name]. All rights reserved.</p>
+        <p>&copy; 2024 Dorien Bennink Fysiotherapie. Alle rechten voorbehouden.</p>
     </footer>
 </body>
 </html>
