@@ -18,12 +18,12 @@
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: #f5f5f5;
         }
 
         /* Navigatiebalk */
         header {
-            background-color: #4a90e2;
+            background-color: #3b82f6;
             color: white;
             padding: 15px 20px;
             display: flex;
@@ -32,6 +32,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         header .logo {
@@ -59,13 +60,13 @@
         /* Hero Sectie */
         .hero {
             text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #4a90e2, #4a6fa5);
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
             color: white;
         }
 
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 20px;
         }
 
@@ -74,54 +75,39 @@
             margin-bottom: 30px;
         }
 
-        /* Over Ons Sectie */
-        .about {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .about img {
-            max-width: 300px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .about .content {
-            flex: 1;
-            max-width: 600px;
-        }
-
-        .about h2 {
-            font-size: 2rem;
-            color: #4a90e2;
-            margin-bottom: 20px;
-        }
-
-        .about p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        /* Diensten Sectie */
-        .services {
+        /* Animatie Stijlen */
+        .section {
             padding: 60px 20px;
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
         }
 
-        .services h2 {
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section h2 {
             font-size: 2rem;
+            color: #2563eb;
             margin-bottom: 20px;
-            color: #4a90e2;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .section img {
+            max-width: 300px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .services ul {
@@ -137,28 +123,6 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Contact Sectie */
-        .contact {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 2rem;
-            color: #4a90e2;
-            margin-bottom: 20px;
-        }
-
-        .contact div {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 15px;
         }
 
         /* Footer */
@@ -197,25 +161,24 @@
     </section>
 
     <!-- Over Ons Sectie -->
-    <section class="about" id="about">
+    <section class="section" id="about">
+        <h2>Over Mij</h2>
+        <p>Ik ben Dorien Bennink, gespecialiseerd in bekkenfysiotherapie. Ik bied persoonlijke zorg om uw mobiliteit te herstellen en uw pijn te verlichten.</p>
         <img src="foto%20Dorien%20Bennink.png" alt="Dorien Bennink">
-        <div class="content">
-            <h2>Over Dorien Bennink</h2>
-            <p>Ik zet me in om uw mobiliteit te herstellen, pijn te verminderen en uw kwaliteit van leven te verbeteren. Met jarenlange ervaring bied ik gespecialiseerde bekkenfysiotherapie en persoonlijke zorg.</p>
-        </div>
     </section>
 
     <!-- Diensten Sectie -->
-    <section class="services" id="services">
+    <section class="section services" id="services">
         <h2>Onze Diensten</h2>
         <ul>
-            <li><strong>Bekkenfysiotherapie:</strong> Verbeter uw houding en herstel sneller.</li>
+            <li><strong>Bekkenfysiotherapie:</strong> Herstel sneller en verbeter uw houding.</li>
         </ul>
     </section>
 
     <!-- Contact Sectie -->
-    <section class="contact" id="contact">
+    <section class="section" id="contact">
         <h2>Contact</h2>
+        <p>Neem contact met mij op voor meer informatie of het maken van een afspraak.</p>
         <div>
             <strong>Telefoon:</strong> <a href="tel:0610101257">+31 610 101 257</a>
         </div>
@@ -231,5 +194,24 @@
     <footer>
         <p>&copy; 2024 Dorien Bennink Fysiotherapie. Alle rechten voorbehouden.</p>
     </footer>
+
+    <script>
+        // JavaScript om scroll animatie toe te voegen
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
