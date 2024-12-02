@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professionele bekkenfysiotherapie door Dorien Bennink. Gespecialiseerd in herstel en persoonlijke zorg.">
+    <meta name="description" content="Welkom bij Fysiotherapie Dorien Bennink. Bekijk onze diensten, contactinformatie en meer.">
     <title>Dorien Bennink Fysiotherapie</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -21,7 +21,6 @@
             background-color: #f5f5f5;
         }
 
-        /* Navigatiebalk */
         header {
             background-color: #3b82f6;
             color: white;
@@ -57,7 +56,6 @@
             text-decoration: underline;
         }
 
-        /* Hero Sectie */
         .hero {
             text-align: center;
             padding: 100px 20px;
@@ -75,57 +73,6 @@
             margin-bottom: 30px;
         }
 
-        /* Animatie Stijlen */
-        .section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section h2 {
-            font-size: 2rem;
-            color: #2563eb;
-            margin-bottom: 20px;
-        }
-
-        .section p {
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        .section img {
-            max-width: 300px;
-            margin: 20px auto;
-            display: block;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .services ul {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .services li {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Footer */
         footer {
             background-color: #333;
             color: white;
@@ -148,70 +95,21 @@
     <header>
         <div class="logo">Dorien Bennink</div>
         <nav>
-            <a href="#about">Over</a>
-            <a href="#services">Diensten</a>
-            <a href="#contact">Contact</a>
+            <a href="about.html">Over</a>
+            <a href="services.html">Diensten</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <!-- Hero Sectie -->
     <section class="hero">
         <h1>Welkom bij Fysiotherapie Dorien Bennink</h1>
-        <p>Ik help u om beter te bewegen, beter te voelen en beter te leven.</p>
-    </section>
-
-    <!-- Over Ons Sectie -->
-    <section class="section" id="about">
-        <h2>Over Mij</h2>
-        <p>Ik ben Dorien Bennink, gespecialiseerd in bekkenfysiotherapie. Ik bied persoonlijke zorg om uw mobiliteit te herstellen en uw pijn te verlichten.</p>
-        <img src="foto%20Dorien%20Bennink.png" alt="Dorien Bennink">
-    </section>
-
-    <!-- Diensten Sectie -->
-    <section class="section services" id="services">
-        <h2>Onze Diensten</h2>
-        <ul>
-            <li><strong>Bekkenfysiotherapie:</strong> Herstel sneller en verbeter uw houding.</li>
-        </ul>
-    </section>
-
-    <!-- Contact Sectie -->
-    <section class="section" id="contact">
-        <h2>Contact</h2>
-        <p>Neem contact met mij op voor meer informatie of het maken van een afspraak.</p>
-        <div>
-            <strong>Telefoon:</strong> <a href="tel:0610101257">+31 610 101 257</a>
-        </div>
-        <div>
-            <strong>E-mail:</strong> <a href="mailto:dorien.bennink@upcmail.nl">dorien.bennink@upcmail.nl</a>
-        </div>
-        <div>
-            <strong>Adres:</strong> Muiderslotweg 154, Haarlem
-        </div>
+        <p>Bekijk onze diensten en ontdek hoe wij u kunnen helpen.</p>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Dorien Bennink Fysiotherapie. Alle rechten voorbehouden.</p>
     </footer>
-
-    <script>
-        // JavaScript om scroll animatie toe te voegen
-        const sections = document.querySelectorAll('.section');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.2
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
 </body>
 </html>
